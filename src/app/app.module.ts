@@ -7,6 +7,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,8 @@ import { environment } from 'src/environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatPaginatorModule,
+    MatTableDataSource,
     FormsModule,
     //AngularFireModule.initializeApp(environment.firebase),
     AngularFireModule.initializeApp({
@@ -25,7 +30,8 @@ import { environment } from 'src/environments/environment';
       messagingSenderId: "xxxxxxxxxxxx",
       appId: "xxxxxxxxxxxxxxxxxxxxxxx"
     }),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
